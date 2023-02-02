@@ -1,33 +1,68 @@
 <!DOCTYPE html>
-    <html>
-        <head>
-            <meta charset="UTF-8" />
-            <title>Input Select</title>
-        </head>
-        <body>
-            <div style="border: 4px double black; width: 200px; padding: 20px 20px 20px 45px;">
-                <form>
-                    <label for="plano">Plano</label>
-                    <select id="plano" name="plano" required>
-                        <option value="">
-                            Escolher Plano
-                        </option>
-                        <option value="gratis">
-                            Free
-                        </option>
-                        <option value="premiun">
-                            Premiun
-                        </option>
-                        <option value="pro">
-                            Pro
-                        </option>
-                    </select>
-    
-                    <button style="margin: 4px 0 0 0;" type="submit">Cadastrar</button>
-                </form>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cadastro Atividade: S01-18</title>
+        <style>
+            div {
+                width: 200px; 
+                margin: auto; 
+                padding: 60px;
 
-            </div>
-            
-        </body>
+            }
 
-    </html>
+            input[type="text"], input[type="password"] {
+                width: 193px;
+
+            }
+
+            select {
+                width: 200px;
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <form>
+                <label for="Nome">Nome</label>
+                <input type="text" name="Nome" placeholder="Informe seu nome completo..." id="Nome" required>
+
+                <label for="Email">Email</label>
+                <input type="text" name="Email" placeholder="Informe seu melhor email..." id="Email" required>
+
+                <label for="descrição">Descrição</label>
+                <textarea name="Texto_Descricao" id="descricao" cols="25" rows="5" placeholder="Diga-nos mais sobre você..." required></textarea>
+
+                <label for="modulo">Módulo</label>
+                <select name="Valor_Modulo" id="modulo" required>
+                    <option value="">Qual módulo você cursa?</option>
+                    <option value="M1">M1</option>
+                    <option value="M2">M2</option>
+                    <option value="M3">M3</option>
+                    <option value="M4">M4</option>
+                    <option value="M5">M5</option>
+                    <option value="M6">M6</option>
+                </select>
+
+                <label for="Senha">Senha</label>
+                <input type="password" name="Senha" placeholder="Digite sua senha..." id="Senha" required>
+
+                <label for="Confirmar_Senha">Confirmar Senha</label>
+                <input type="password" name="Confirmar_Senha" placeholder="Digite novamente sua senha..." id="Confirmar_Senha" required>
+
+                <label for="Novidade_Email">Deseja receber novidades em seu e-mail?</label>
+                <label for="sim">Sim</label>
+                <input type="radio" name="Novidades_Email" id="sim" value="sim" required>
+                <label for="nao">Não</label>
+                <input type="radio" name="Novidades_Email" id="nao" value="nao" required>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+
+        </div>
+
+    </body>
+
+</html>
